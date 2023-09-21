@@ -11,6 +11,7 @@ const bodyParser = require('body-parser')
 const bacton = require("./public/database/placesSchemas");
 const mongoURL = "mongodb://localhost:27017/db"
 
+//This is a test comment
 
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
