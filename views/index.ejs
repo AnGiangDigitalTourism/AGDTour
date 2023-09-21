@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale = 1.0">
+        <title>An Giang Tourism</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/index.css">
+    </head>
+
+    <body>
+        <header class = "header-main">
+            <div class = 'header-main-logo'>
+                <img src="/Image/aglogo.jpg" alt="AGLogo">
+                <nav class = 'header-nav'>
+                    <ul>
+                        <li><a href="/">GIỚI THIỆU</a></li>
+                        <li><a href="places">ĐỊA ĐIỂM</a></li>
+                        <li><a href="map">BẢN ĐỒ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a class = 'setting-icon'>&#9881;</a>
+        </header>
+
+        <main>
+            <section class="slide-container">
+                <img src = "/Image/thatson.jpg" class = 'slide fade'>
+                <img src = "/Image/khuluuniem.jpg" class = 'slide fade'>
+                <img src = "/Image/mieuba.jpg" class = 'slide fade'>                
+                <img src = "/Image/rungtram.jpg" class = 'slide fade'>
+                
+
+                <a class="prev" onclick="pushSlide(-1)">&#10094;</a>
+                <a class="next" onclick="pushSlide(1)">&#10095;</a>
+
+                <div class = "overlay">
+                    <div class="text-slide">
+                        <h3 style="color:white">THẤT SƠN AN GIANG</h3>
+                        <p style="color: white">Thất Sơn (Bảy Núi): gồm 1 quần thể 37 ngọn núi thuộc 2 huyện thị là Thị xã Tịnh Biên & Tri Tôn, nhưng có 7 ngọn tiêu biểu là: Núi Cấm (Thiên Cấm Sơn) - ngọn núi cao nhất tỉnh An Giang cũng như cả khu vực Đồng bằng sông Cửu Long, cao 716m; Núi Dài Năm Giếng (Ngũ Hồ Sơn); Núi Cô Tô (Phụng Hoàng Sơn); Núi Dài (Ngọa Long Sơn); Núi Tượng (Liên Hoa Sơn); Núi Két (Anh Vũ Sơn); Núi Nước (Thủy Đài Sơn).</p>
+                    </div>
+                    <div class="text-slide">
+                        <h3 style="color:white">KHU LƯU NIỆM CHỦ TỊCH TÔN ĐỨC THẮNG</h3>
+                        <p style="color: white">Khu lưu niệm Bác Tôn tọa lạc tại Cù lao Ông Hổ (Xã Mỹ Hòa Hưng, Thành phố Long Xuyên) với tổng diện tích hơn 300m2. Điểm đến văn hóa này đã được chính thức công nhận là Di tích Quốc gia đặc biệt vào năm 2012.</p>
+                    </div>
+                    <div class="text-slide">
+                        <h3 style="color:white">MIẾU BÀ CHÚA XỨ NÚI SAM</h3>
+                        <p style="color: white">Miếu Bà Chúa Xứ Núi Sam là một di tích (lịch sử, kiến trúc và tâm linh) quan trọng của tỉnh và của khu vực.
+                            Việc thờ cúng Bà Chúa Xứ (Chúa Xứ Thánh Mẫu) được xem là trong tín ngưỡng thờ Mẫu Việt Nam.
+                            Lễ hội Vía Bà Chúa Xứ Núi Sam được tổ chức trang trọng từ ngày 23 đến 27 tháng 4 âm lịch hàng năm, và được Bộ Văn hóa Thông tin và Tổng cục Du lịch Việt Nam công nhận là Lễ hội cấp Quốc gia từ năm 2001.</p>
+                    </div>
+                    <div class="text-slide">
+                        <h3 style="color:white">RỬNG TRÀM TRÀ SƯ</h3>
+                        <p style="color: white">Rừng tràm Trà Sư là một khu rừng và khu du lịch sinh thái nằm trên địa bàn ấp Văn Trà, xã Văn Giáo, thị xã Tịnh Biên, tỉnh An Giang[1]. Đây là rừng ngập nước tiêu biểu cho vùng Tây sông Hậu, là nơi sinh sống của nhiều loài động vật và thực vật thuộc hệ thống rừng đặc dụng Việt Nam.</p>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <sectioni id = '#intro' class = 'intro-main'>
+                <h2 class = 'h2-main'>GIỚI THIỆU</h2>
+                <p>
+                    An Giang là một tỉnh thuộc vùng đồng bằng sông Cửu Long, Việt Nam.
+                    An Giang là tỉnh thuộc Vùng kinh tế trọng điểm vùng đồng bằng sông Cửu Long. Là tỉnh có dân số đông nhất vùng đồng bằng sông Cửu Long và là tỉnh đứng thứ 8 cả nước về dân số. Một phần của An Giang nằm trong vùng tứ giác Long Xuyên.
+                    <br><br>
+                    Không chỉ có diện tích khá lớn ở miền Tây Nam Bộ mà An Giang còn được tạo hoá ban tặng những cảnh quan tươi đẹp và non nước hữu tình. Nhắc đến An Giang, chắc hẳn sẽ liên tưởng ngay đến sắc xanh biếc của rừng và nét đẹp hoang sơ, kỳ vĩ.
+                </p>
+            </section>
+
+            <section class = 'intro-main' style="margin-top:10px">
+                <h2 class='h2-main'>BẢN ĐỒ AN GIANG</h2>
+
+                <div class = 'map-container'>
+                    <div style="background-image:url('/Image/angiangmap.jpg'); background-repeat: no-repeat; width:500px; height: 500px">
+                        <a onclick="toggleAsideInfo()"><img src="/Image/mappin.png" class = 'pin'></a>
+                    </div>
+
+                    <div class = 'aside-info'>
+                        <div style="width:100%; height: 50px;background-color: #990011; display: flex; justify-content: center; align-items: center;"><h3 style="font-size: 20px; color:white">Khu Lưu Niệm Chủ Tịch Tôn Đức Thắng</h3></div>
+                        <div style="height:450px; background-color:  white; overflow-y: scroll;padding: 0px 20px 0px 20px">
+                            <p>
+                                Khu lưu niệm Bác Tôn là một điểm đến văn hóa lịch sử giúp bạn hiểu rõ hơn về cuộc đời của một người cộng sản kiên trung cũng như vẻ đẹp vùng đất và con người xứ cù lao bình dị, hồn hậu này
+                                <br><br>
+                                Khu lưu niệm Bác Tôn tọa lạc tại Cù lao Ông Hổ (Xã Mỹ Hòa Hưng, Thành phố Long Xuyên) với tổng diện tích hơn 300m2. Điểm đến văn hóa này đã được chính thức công nhận là Di tích Quốc gia đặc biệt vào năm 2012. Trong không khí mát mẻ, trong lành đến từ những hàng cây được trồng bao phủ xung quanh Khu lưu niệm, nơi đây đã trở thành “địa chỉ đỏ” cho các hoạt động giáo dục truyền thống và cũng là điểm tham quan mà bạn không nên bỏ lỡ nếu có dịp đến du lịch An Giang
+                                <br><br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                    
+            </section>
+        </main>
+        <br><br><br><br><br><br>
+
+        <footer class="footer-main">
+            <div class = 'footer-section-1'>
+                <img src="/Image/TNHLogo.png" class="tnh-logo">
+                <h5 class = 'school-text'>TRƯỜNG THPT CHUYÊN THOẠI NGỌC HẦU</h5>
+            </div>
+
+            <div class = 'footer-section-2'>
+                <h4 class="section-title">VỀ CHÚNG TÔI</h4>
+                <a href="" class = 'footer-link'>About Us</a>
+            </div>
+
+            <div class = 'footer-section-2'>
+                <h4 class="section-title">KHÁC</h4>
+                <a href="/" class = 'footer-link'>Đóng Góp</a>
+                <a href="/" class = 'footer-link'>FAQs</a>
+            </div>
+        </footer>
+    </body>
+    <script src="/javascript/slide.js"></script>
+    <script src="/javascript/cssChange.js"></script>
+</html>

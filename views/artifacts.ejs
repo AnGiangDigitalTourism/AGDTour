@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale = 1.0">
+        <title>An Giang Tourism</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/artifacts.css">
+    </head>
+
+    <body>
+        <header class = "header-main">
+            <div class = 'header-main-logo'>
+                <img src="/Image/aglogo.jpg" alt="AGLogo">
+                <nav class = 'header-nav'>
+                    <ul>
+                        <li><a href="/">GIỚI THIỆU</a></li>
+                        <li><a href="/places">ĐỊA ĐIỂM</a></li>
+                        <li><a href="#">BẢN ĐỒ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <a class = 'setting-icon'>&#9881;</a>
+        </header>
+
+        <main class = 'card-container'>
+            <% if (fetchData){%>
+                <% fetchData.forEach((element, index) => {%>
+                    <a href="" onmouseover="zoomInCard(index)" onmouseout="zoomOutCard(index)" class = 'card-link <%= element.infoCode %>'><div class = 'card'>
+                        <img src="/image/<%= element.infoCode + '.jpg'%>" class = 'card-image'>
+                        <h3 class="card-title"><%=element.name%></h3>
+                    </div></a>
+                <% }); %>
+            <% } %>
+
+        </main>
+
+        <br><br><br><br><br><br><br><br><br><br><br>
+
+        <footer class="footer-main">
+            <div class = 'footer-section-1'>
+                <img src="/Image/TNHLogo.png" class="tnh-logo">
+                <h5 class = 'school-text'>TRƯỜNG THPT CHUYÊN THOẠI NGỌC HẦU</h5>
+            </div>
+
+            <div class = 'footer-section-2'>
+                <h4 class="section-title">VỀ CHÚNG TÔI</h4>
+                <a href="" class = 'footer-link'>About Us</a>
+            </div>
+
+            <div class = 'footer-section-2'>
+                <h4 class="section-title">KHÁC</h4>
+                <a href="/" class = 'footer-link'>Đóng Góp</a>
+                <a href="/" class = 'footer-link'>FAQs</a>
+            </div>
+        </footer>
+        
+    </body>
+    <script src="/javascript/cssChange.js"></script>
+    <script>
+        const cardLink = document.querySelectorAll('.card-link');
+        cardLink.forEach((card, index) => {
+            card.setAttribute('href', '/places/artifacts/' +card.classList[1]);
+        })
+    </script>
+</html>

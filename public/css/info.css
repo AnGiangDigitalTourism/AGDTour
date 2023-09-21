@@ -1,0 +1,51 @@
+main{
+    display: flex;
+    justify-content: center;
+  }
+  
+  section{
+    background-color: white;
+    width: 55%;
+    padding: 30px 30px 30px 30px;
+    margin-top: 50px;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1{
+    font-size:40px;
+    font-weight: 700;
+  }
+  
+  p{
+    font-size:20px;
+    line-height: 1.6;
+    margin-top: 40px;
+  }
+
+  .content-image{
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  
+  audio{
+    margin-top: 30px;
+  }
+  
+  
+  iframe{
+    margin-top: 50px;
+  }
+  
+  
+  footer{
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    
+  }
