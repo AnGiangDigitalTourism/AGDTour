@@ -21,7 +21,7 @@ mongoose.set('strictQuery', false);
 const conn = mongoose.createConnection(process.env.MONGO_URI)
 
 mongoose
-  .connect("mongodb://localhost/db")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected"))
   .catch((error) => console.log(error));
 
