@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -11,14 +12,15 @@ const bodyParser = require('body-parser')
 const bacton = require("./public/database/placesSchemas");
 const mongoURL = "mongodb://localhost:27017/db"
 
-//This is a test comment
+const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+mongoose.set('strictQuery', false);
 
-const conn = mongoose.createConnection(mongoURL)
+const conn = mongoose.createConnection(process.env.MONGO_URI)
 
 mongoose
   .connect("mongodb://localhost/db")
@@ -82,4 +84,4 @@ app.get('/map', (req, res) => {
   res.render('map');
 })
 
-app.listen(3000);
+app.listen(PORT);
