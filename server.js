@@ -4,7 +4,6 @@ const app = express();
 const mongoose = require("mongoose");
 const path = require('path')
 const crypto = require('crypto')
-const {GridFsStorage} = require('multer-gridfs-storage')
 const Grid = require('gridfs-stream')
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
