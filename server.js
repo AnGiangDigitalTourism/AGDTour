@@ -82,4 +82,9 @@ app.get('/map', (req, res) => {
   res.render('map');
 })
 
-app.listen(PORT);
+conn.then(() => {
+  app.listen(PORT, () => {
+      console.log("Listening on port ${PORT}")
+    });
+})
+
