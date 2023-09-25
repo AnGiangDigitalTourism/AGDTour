@@ -70,11 +70,11 @@ app.get("/places/artifacts/:code", async (req, res) => {
       { infoCode: 1, name: 1, data: 1, _id: 0 }
   );
   
-  console.log("World " + data);
-    let titleText = data[0].name;
-    let contentText = data[0].data;
-    let imageLink = data[0].image;
-    let videoLink = data[0].ytlink;
+  console.log("World " + typeof(data));
+    let titleText = data.name;
+    let contentText = data.data;
+    let imageLink = data.image;
+    let videoLink = data.ytlink;
   
   
     res.render("info", { title: titleText, content: contentText, imageLink: imageLink, videoLink: videoLink  });
