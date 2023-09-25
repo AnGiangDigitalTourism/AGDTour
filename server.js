@@ -59,7 +59,8 @@ app.get("/places", (req, res) => {
 
 app.get("/places/artifacts", async (req, res) => {
   const arList = await bacton.find();
-  console.log(arList);
+  console.log("fdosjij")
+  console.log("Log: " + arList);
   res.render("artifacts", { fetchData: arList });
 });
 
