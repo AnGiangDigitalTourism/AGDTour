@@ -59,7 +59,6 @@ app.get("/places", (req, res) => {
 
 app.get("/places/artifacts", async (req, res) => {
   const arList = await bacton.find();
-  console.log("Hello " + arList.image);
   res.render("artifacts", { fetchData: arList });
 });
 
@@ -69,7 +68,9 @@ app.get("/places/artifacts/:code", async (req, res) => {
     const data = await bacton.find(
       {infoCode: req.params.code },
       { infoCode: 1, name: 1, data: 1, _id: 0 }
-    );
+  );
+  
+  console.log("World " + data);
     let titleText = data[0].name;
     let contentText = data[0].data;
     let imageLink = data[0].image;
