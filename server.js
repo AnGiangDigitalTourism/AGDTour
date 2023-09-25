@@ -67,15 +67,13 @@ app.get("/places/artifacts", async (req, res) => {
 app.get("/places/artifacts/:code", async (req, res) => {
     const data = await bacton.find(
       {infoCode: req.params.code },
-      { infoCode: 1, name: 1, data: 1, _id: 0 }
+      { infoCode: 1, name: 1, data: 1, image:1, ytlink:1, _id: 0 }
   );
   
-  console.log("World " + data[0]);
-    let titleText = data.name;
-    let contentText = data.data;
-    let imageLink = data.image;
-    let videoLink = data.ytlink;
-  
+    let titleText = data[0].name;
+    let contentText = data[0].data;
+    let imageLink = data[0].image;
+    let videoLink = data[0].ytlink;
   
     res.render("info", { title: titleText, content: contentText, imageLink: imageLink, videoLink: videoLink  });
 });
