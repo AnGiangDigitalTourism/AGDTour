@@ -34,7 +34,7 @@
             <% if (fetchData){%>
                 <% fetchData.forEach((element, index) => {%>
                     <a href="" onmouseover="zoomInCard(index)" onmouseout="zoomOutCard(index)" class = 'card-link <%= element.infoCode %>'><div class = 'card'>
-                        <img src="/image/<%= element.infoCode + '.jpg'%>" class = 'card-image'>
+                        <img src=<%= element.image%> class = 'card-image'>
                         <h3 class="card-title"><%=element.name%></h3>
                     </div></a>
                 <% }); %>

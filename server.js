@@ -18,19 +18,19 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 mongoose.set('strictQuery', false);
 
-const conn = mongoose.createConnection(process.env.MONGO_URI)
+// const conn = mongoose.createConnection(process.env.MONGO_URI)
 
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected"))
   .catch((error) => console.log(error));
 
-let gfs, gfsBucket;
-conn.once('open', () => {
-    gfsBucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'files'});
-    gfs = Grid(conn.db, mongoose.mongo);
-    gfs.collection('files');
-})
+// let gfs, gfsBucket;
+// conn.once('open', () => {
+//     gfsBucket = new mongoose.mongo.GridFSBucket(conn.db, {bucketName: 'files'});
+//     gfs = Grid(conn.db, mongoose.mongo);
+//     gfs.collection('files');
+// })
 
   
 
@@ -38,20 +38,20 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/image/:filename", async (req, res) => {
-  const fetch = await gfs.files.find({ filename: req.params.filename }).toArray()
-  if (fetch.length === 0) res.send("NO FILE EXISTS")
-  else {
-      const file = fetch[0];
-      if (file.contentType === "image/jpeg" || file.contentType === 'image/png') {
-          const readStream = gfsBucket.openDownloadStream(file._id);
-          readStream.pipe(res);
-      }
-      else {
-          res.send("NOT AN IMAGE");
-      }
-  }
-})
+// app.get("/image/:filename", async (req, res) => {
+//   const fetch = await gfs.files.find({ filename: req.params.filename }).toArray()
+//   if (fetch.length === 0) res.send("NO FILE EXISTS")
+//   else {
+//       const file = fetch[0];
+//       if (file.contentType === "image/jpeg" || file.contentType === 'image/png') {
+//           const readStream = gfsBucket.openDownloadStream(file._id);
+//           readStream.pipe(res);
+//       }
+//       else {
+//           res.send("NOT AN IMAGE");
+//       }
+//   }
+// })
 
 app.get("/places", (req, res) => {
   res.render("places");
@@ -59,7 +59,6 @@ app.get("/places", (req, res) => {
 
 app.get("/places/artifacts", async (req, res) => {
   const arList = await bacton.find();
-  console.log(arList);
   res.render("artifacts", { fetchData: arList });
 });
 
@@ -72,10 +71,11 @@ app.get("/places/artifacts/:code", async (req, res) => {
     );
     let titleText = data[0].name;
     let contentText = data[0].data;
-  let imageLink = "/image/" + req.params.code + '.jpg';
+    let imageLink = data[0].image;
+    let videoLink = data[0].ytlink;
   
   
-    res.render("info", { title: titleText, content: contentText, imageLink: imageLink });
+    res.render("info", { title: titleText, content: contentText, imageLink: imageLink, videoLink: videoLink  });
 });
 
 
