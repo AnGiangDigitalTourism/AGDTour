@@ -4,6 +4,8 @@ const placesSchemaForm = new mongoose.Schema({
     infoCode:String,
     name: String,
     data: String,
+    image: String,
+    ytlink:String
 })
 
 
