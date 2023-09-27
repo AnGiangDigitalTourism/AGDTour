@@ -5,7 +5,7 @@ main{
   
   section{
     background-color: white;
-    width: 55%;
+    width: 90%;
     padding: 30px 30px 30px 30px;
     margin-top: 50px;
     border-radius:20px;
@@ -15,12 +15,12 @@ main{
   }
   
   h1{
-    font-size:40px;
+    font-size: 4vw;
     font-weight: 700;
   }
   
   p{
-    font-size:20px;
+    font-size:2vw;
     line-height: 1.6;
     margin-top: 40px;
   }
