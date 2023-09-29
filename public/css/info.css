@@ -1,9 +1,27 @@
 main{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   
-  section{
+  .lang {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  .lang button{
+    border: 1.5px solid black;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10%;
+  }
+
+  .lang button span{ 
+    font-size: 2vw;
+  }
+
+
+  .content-section {
     background-color: white;
     width: 90%;
     padding: 30px 30px 30px 30px;
@@ -12,6 +30,7 @@ main{
     display:flex;
     flex-direction: column;
     align-items: center;
+    display: none;
   }
   
   h1{

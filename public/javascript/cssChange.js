@@ -25,6 +25,21 @@ function moveTo(code) {
     window.location.href += '/'+code;
 }
 
+function switchLang(lang) {
+    let contents = document.getElementsByClassName('content-section');
+    for (let i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none'
+    }
+    if (lang === 'vi') {
+        let vi = document.getElementsByClassName('vi');
+        vi[0].style.display = 'flex'
+    }
+    else {
+        let en = document.getElementsByClassName('en');
+        en[0].style.display = 'flex'
+    }
+}
+
 
 // function zoomInCard2(n) {
 //     let cards = document.getElementsByClassName('card');

@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 
 const placesSchemaForm = new mongoose.Schema({
     infoCode:String,
-    name: String,
-    data: String,
-    image: String,
-    ytlink:String
+    title_vi: String,
+    content_vi: String,
+    video_vi: String,
+    title_en: String,
+    content_en: String,
+    video_en:String,
+    image:String,
 })
 
 

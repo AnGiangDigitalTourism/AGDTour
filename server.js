@@ -67,16 +67,30 @@ app.get("/places/artifacts", async (req, res) => {
 app.get("/places/artifacts/:code", async (req, res) => {
     const data = await bacton.find(
       {infoCode: req.params.code },
-      { infoCode: 1, name: 1, data: 1, image:1, ytlink:1, _id: 0 }
   );
+    console.log(typeof(data[0]));  
+    let title_vi = data[0].title_vi;
+    let content_vi = data[0].content_vi;
+    let video_vi = data[0].video_vi;
   
-    let titleText = data[0].name;
-    let contentText = data[0].data;
-    let imageLink = data[0].image;
-    let videoLink = data[0].ytlink;
+    let title_en = data[0].title_en;
+    let content_en = data[0].content_en;
+    let video_en = data[0].video_en;
+      
+    let image = data[0].image;
   
-    res.render("info", { title: titleText, content: contentText, imageLink: imageLink, videoLink: videoLink  });
+    res.render("info", {
+      title_vi: title_vi,
+      title_en: title_en,
+      content_vi: content_vi,
+      content_en: content_en,
+      video_vi: video_vi,
+      video_en: video_en,
+      image_vi: image,
+      image_en:image
+    });
 });
+
 
 
 app.get('/map', (req, res) => {
