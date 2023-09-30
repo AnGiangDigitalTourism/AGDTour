@@ -20,10 +20,7 @@ mongoose.set('strictQuery', false);
 
 // const conn = mongoose.createConnection(process.env.MONGO_URI)
 
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("Connected"))
-  .catch((error) => console.log(error));
+
 
 // let gfs, gfsBucket;
 // conn.once('open', () => {
@@ -68,7 +65,6 @@ app.get("/places/artifacts/:code", async (req, res) => {
     const data = await bacton.find(
       {infoCode: req.params.code },
   );
-    console.log(typeof(data[0]));  
     let title_vi = data[0].title_vi;
     let content_vi = data[0].content_vi;
     let video_vi = data[0].video_vi;
@@ -98,7 +94,15 @@ app.get('/map', (req, res) => {
 })
 
 
-app.listen(PORT, () => {
-    console.log("Listening on port ${PORT}")
-  });
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Connected");
+    app.listen(PORT, () => {
+      console.log("Listening on port", PORT)
+    });
+  })
+  .catch((error) => console.log(error));
+
+
 
