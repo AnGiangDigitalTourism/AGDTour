@@ -60,23 +60,27 @@ width: 100%;
 height: 200px;
 background-color: #990011;
 display: flex;
+padding: 0px 20px 0px 0px;
 }
 
 .footer-section-1{
 display: flex;
 flex-direction: column;
 margin-left: 30px;
+align-items: center;
+justify-content: center;
 }
 
 .tnh-logo{
-height: 175px;
+width: 50%;
 align-self: center;
 }
 
 .school-text{
-font-size: 15px;
+font-size: 80%;
 font-weight: 600;
 color:white;
+text-align: center;
 }
 
 .footer-section-2{
@@ -89,10 +93,12 @@ flex-direction: column;
 .section-title{
 color:white;
 font-weight:600;
+font-size:90%;
 }
 
 .footer-link{
 color:white;
 margin-top: 10px;
 text-decoration: underline;
+font-size: 85%;
 }

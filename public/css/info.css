@@ -11,7 +11,7 @@ main{
   }
 
   .lang button{
-    border: 1.5px solid black;
+    border: 2px solid black;
     padding: 5px 5px 5px 5px;
     border-radius: 10%;
   }
@@ -34,12 +34,12 @@ main{
   }
   
   h1{
-    font-size: 4vw;
+    font-size: 260%;
     font-weight: 700;
   }
   
   p{
-    font-size:2vw;
+    font-size: 130%;
     line-height: 1.6;
     margin-top: 40px;
   }
@@ -54,21 +54,8 @@ main{
   }
   
   
-  audio{
-    margin-top: 30px;
-  }
-  
   
   iframe{
     margin-top: 50px;
   }
   
-  
-  footer{
-    background-color: black;
-    width: 100%;
-    height: 200px;
-    margin-top: 50px;
-    display: flex;
-    
-  }
