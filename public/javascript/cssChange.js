@@ -33,10 +33,14 @@ function switchLang(lang) {
     if (lang === 'vi') {
         let vi = document.getElementsByClassName('vi');
         vi[0].style.display = 'flex'
+        let txt = document.getElementsByClassName('lang-text');
+        txt[0].innerHTML = "Chọn ngôn ngữ của bạn"
     }
     else {
         let en = document.getElementsByClassName('en');
         en[0].style.display = 'flex'
+        let txt = document.getElementsByClassName('lang-text');
+        txt[0].innerHTML = "Choose your language"
     }
 }
 

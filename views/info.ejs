@@ -41,16 +41,19 @@
 
 
         <main>
-            <section class="lang">
-                <button onclick="switchLang('vi')">
-                    <img src="/Image/vnflag.jpg" height="50px">
-                </button>
-
-                <button onclick="switchLang('en')" style="margin-left: 50px;">
-                    <img src="/Image/ukflag.jpg" height="50px">
-                </button>
-            </section>
-            
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <h3 class="lang-text" style="text-align: center; margin-top: 40px;">Chọn ngôn ngữ của bạn</h3>
+                <section class="lang">
+                    <button onclick="switchLang('vi')">
+                        <img src="/Image/vnflag.jpg" height="50px">
+                    </button>
+                    
+                    <button onclick="switchLang('en')" style="margin-left: 50px;">
+                        <img src="/Image/ukflag.jpg" height="50px">
+                    </button>
+                </section>
+                
+            </div>
 
             <section class="content-section vi">
                 <h1>
