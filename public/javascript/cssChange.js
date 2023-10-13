@@ -30,6 +30,9 @@ function switchLang(lang) {
     for (let i = 0; i < contents.length; i++) {
         contents[i].style.display = 'none'
     }
+
+    let tmp = document.getElementsByClassName("temp-lang-text")
+    tmp[0].style.display = "none"
     if (lang === 'vi') {
         let vi = document.getElementsByClassName('vi');
         vi[0].style.display = 'flex'

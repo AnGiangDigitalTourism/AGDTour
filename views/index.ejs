@@ -3,7 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, inital-scale = 1.0">
-        <title>An Giang Tourism</title>
+        <title>E-Tour Guide</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,22 +18,28 @@
     </head>
 
     <body>
-        <header class = "header-main">
-            <div class = 'header-main-logo'>
-                <!-- <img src="/Image/aglogo.jpg" alt="AGLogo"> -->
-                <nav class = 'header-nav'>
-                    <ul>
-                        <li><a href="/">GIỚI THIỆU</a></li>
-                        <li><a href="places">ĐỊA ĐIỂM</a></li>
-                        <li><a href="map">BẢN ĐỒ</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #990011;" >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        </header>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href = "/" class="nav-link fw-bold" style="color:white">GIỚI THIỆU</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href = "/places" class="nav-link fw-bold" style="color:white">ĐỊA ĐIỂM</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href = "/map" class="nav-link fw-bold" style="color:white">BẢN ĐỒ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
         <main>
-            <section class="slide-container">
+            <!-- <section class="slide-container">
                 <img src = "/Image/thatson.jpg" class = 'slide fade'>
                 <img src = "/Image/khuluuniem.jpg" class = 'slide fade'>
                 <img src = "/Image/mieuba.jpg" class = 'slide fade'>                
@@ -61,24 +70,28 @@
                     </div>
 
                 </div>
-            </section>
+            </section> -->
 
 
-            <sectioni id = '#intro' class = 'intro-main'>
+            <section id = '#intro' class = 'intro-main'>
                 <h2 class = 'h2-main'>GIỚI THIỆU</h2>
                 <p>
-                    An Giang là một tỉnh thuộc vùng đồng bằng sông Cửu Long, Việt Nam.
-                    An Giang là tỉnh thuộc Vùng kinh tế trọng điểm vùng đồng bằng sông Cửu Long. Là tỉnh có dân số đông nhất vùng đồng bằng sông Cửu Long và là tỉnh đứng thứ 8 cả nước về dân số. Một phần của An Giang nằm trong vùng tứ giác Long Xuyên.
+                    E-Tour Guide là website lưu trữ và quản lý thông tin chi tiết của các địa điểm du lịch. Hệ thống E-Tour Guide đi cùng các mã QR mà các bạn có thể quét ở các địa điểm du lịch đã được số hóa này
                     <br><br>
-                    Không chỉ có diện tích khá lớn ở miền Tây Nam Bộ mà An Giang còn được tạo hoá ban tặng những cảnh quan tươi đẹp và non nước hữu tình. Nhắc đến An Giang, chắc hẳn sẽ liên tưởng ngay đến sắc xanh biếc của rừng và nét đẹp hoang sơ, kỳ vĩ.
+                    Bạn có thể sử dụng E-Tour Guide như một hướng dẫn viên du lịch điện tử, giúp cho chuyến tham quan của bạn trở nên thú vị, hấp dẫn và bổ ích
                 </p>
             </section>
 
-            <section class = 'intro-main' style="margin-top:10px">
+            <section class = 'intro-main' style="margin-top: 10px;">
+                <h2 class = 'h2-main' style="font-size:160%">CÁC ĐỊA ĐIỂM DU LỊCH</h2>
+                <a href="/places" style="margin-top:5px">Di chuyển đến trang Địa Điểm</a>    
+            </section>
+
+            <!-- <section class = 'intro-main' style="margin-top:10px">
                 <h2 class='h2-main'>BẢN ĐỒ AN GIANG</h2>
 
                 <div class = 'map-container'>
-                    <div style="background-image:url('/Image/angiangmap.jpg'); background-repeat: no-repeat; width:500px; height: 500px">
+                    <div style="background-image:url('/Image/angiangmap.jpg'); background-repeat: no-repeat; width:100%;">
                         <a onclick="toggleAsideInfo()"><img src="/Image/mappin.png" class = 'pin'></a>
                     </div>
 
@@ -95,7 +108,7 @@
                     </div>
                 </div>
                     
-            </section>
+            </section> -->
         </main>
         <br><br><br><br><br><br>
 
@@ -119,4 +132,5 @@
     </body>
     <script src="/javascript/slide.js"></script>
     <script src="/javascript/cssChange.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

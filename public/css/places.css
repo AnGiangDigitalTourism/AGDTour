@@ -1,36 +1,28 @@
-.card-container{
+/* .card-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 .card{
     margin-top: 50px;
-    height: 100px;
-    width: fit-content;
-    display: flex;
-    border-radius: 20px;
-    border: 2px solid black;
-    align-items: center;
-    padding: 10px 20px 10px 0px;
 }
 
+.test{
+    background-color:cyan;
+}
 
 .card-image{
-    height: 100px;
-    z-index: -1;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
     margin-right: 20px;
 }
 
 .card-title{
-    font-size: 20px;
+    font-size: 150%;
     font-weight: 600;   
 }
 
 .card-caption{
-    font-size: 15px;;
+    font-size: 100%;
     color: rgb(203, 199, 199);
     margin-top: 10px;
 }

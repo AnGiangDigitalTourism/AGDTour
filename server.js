@@ -72,6 +72,11 @@ app.get("/places/artifacts/:code", async (req, res) => {
     let title_en = data[0].title_en;
     let content_en = data[0].content_en;
     let video_en = data[0].video_en;
+
+  if (title_en === "") title_en = "Title is being edited";
+  if (content_en === "") content_en = "Content is being edited";
+  if (video_en === "") video_en = "Video is being edited";
+
       
     let image = data[0].image;
   
